@@ -1,0 +1,53 @@
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    #mission_statement {
+        padding: .75em;
+        font-size: 2.75em;
+        font-weight: bold;
+        color: #39B54A;
+    }
+    #are_you {
+        padding-top: 1em;
+        padding: 1em;
+        font-size: 1.75em;
+        font-style: italic;
+        font-weight: 200;
+
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    #mission_statement {
+      padding: 1em;
+      font-size: 2.5em;
+      font-weight: bold;
+      color: #39B54A;
+    }
+    #are_you{
+        padding-top:1em;
+        padding: 1.25em;
+        font-size: 1.75em;
+        font-style: italic;
+        font-weight: 200;
+        
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    #mission_statement{
+        padding: .75em;
+        font-size: 4em;
+        font-weight: bold;
+        color:#39B54A;
+    }
+    #are_you{
+        padding-top:1em;
+        padding: .75em;
+        font-size: 2.5em;
+        font-style: italic;
+        font-weight: 200;
+        
+    }
+}
