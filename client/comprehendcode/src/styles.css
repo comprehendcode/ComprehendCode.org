@@ -7,3 +7,14 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+.btn{
+  color: white;
+  background-color: #39B54A;
+  border-radius: 25px;
+}
+.btn:hover{
+    color: white;
+    background-color: rgb(26, 141, 42);
+
+}
