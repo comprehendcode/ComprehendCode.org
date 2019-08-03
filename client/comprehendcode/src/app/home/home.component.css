@@ -1,10 +1,26 @@
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
     #mission_statement {
+        padding-top: 1.75em;
+        padding-left: 3em;
+        padding-right: 3em;
         padding: .75em;
         font-size: 2.75em;
         font-weight: bold;
-        color: #39B54A;
+        color: black;
+    }
+    #learn_more {
+        margin-top: 1em;
+        margin-left: 11em;
+        padding: 1em;
+    }
+
+    #home {
+        background-image: url("../../assets/background.svg");
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
     }
 
 }
@@ -12,10 +28,25 @@
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
     #mission_statement {
-      padding: 1em;
-      font-size: 2.5em;
-      font-weight: bold;
-      color: #39B54A;
+        padding-top: 1.75em;
+        padding-left: 3em;
+        padding-right: 3em;
+        padding: 1em;
+        font-size: 2.5em;
+        font-weight: bold;
+        color: black;
+    }
+    #learn_more {
+        margin-top: 1em;
+        margin-left: 11em;
+        padding: 1em;
+    }
+    #home {
+        background-image: url("../../assets/background.svg");
+        background-size: 100% 100%;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
     }
 
 }
@@ -34,5 +65,11 @@
         margin-top: 1em;
         margin-left: 11em;
         padding: 1em;
+    }
+    #home{ 
+        background-image: url("../../assets/background.svg");
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
     }
 }
