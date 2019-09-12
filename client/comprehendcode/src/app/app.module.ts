@@ -6,15 +6,20 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { AdminComponent } from './admin/admin.component';
+import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path:'admin', component: AdminComponent}
 ]
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AdminComponent,
+    AdminNavbarComponent
   ],
   imports: [
     BrowserModule,
