@@ -1,0 +1,29 @@
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    #logo{
+        height: 3.6em;
+        width:5em;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    #logo{
+        height: 3.5em;
+        width:5.7em;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    #logo{
+        height: 4em;
+        width:7.5em;
+    }
+    .nav-link{
+        font-weight: bolder;
+    }
+    #navbar navbar-expand-lg navbar-light bg-transparent{
+        color: green;
+    }
+}

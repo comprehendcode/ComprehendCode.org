@@ -6,15 +6,21 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
+import { HttpClient } from 'selenium-webdriver/http';
+import { NavbarGeneralComponent } from './navbar-general/navbar-general.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent},
 ]
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AboutComponent,
+    NavbarGeneralComponent
   ],
   imports: [
     BrowserModule,
