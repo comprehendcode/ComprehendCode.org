@@ -6,7 +6,8 @@ var dbURI = process.env.DATABASE_URL;
 
 mongoose.connect(dbURI, {
     useCreateIndex: true,
-    useNewUrlParser: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 // CONNECTION EVENTS
