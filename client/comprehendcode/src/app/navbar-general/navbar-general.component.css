@@ -23,7 +23,14 @@
     .nav-link{
         font-weight: bolder;
     }
-    #navbar navbar-expand-lg navbar-light bg-transparent{
-        color: green;
+
+    .navbar navbar-expand-lg navbar-light bg-success{
+        border-bottom-left-radius: 24;
+        border-bottom-right-radius: 24;
+
+        padding-left: 4em;
+        padding-right: 4em;
     }
+    
+  
 }

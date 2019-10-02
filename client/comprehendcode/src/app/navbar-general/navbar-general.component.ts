@@ -5,6 +5,8 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './navbar-general.component.html',
   styleUrls: ['./navbar-general.component.css']
 })
+
+
 export class NavbarGeneralComponent implements OnInit {
 
   constructor() { }
