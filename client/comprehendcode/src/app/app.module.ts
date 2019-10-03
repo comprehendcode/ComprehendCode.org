@@ -15,13 +15,17 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { EventsComponent } from './events/events.component';
+import { AdminEventsComponent } from './admin-events/admin-events.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'events', component: EventsComponent},
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
+  { path: 'admin/events', component: AdminEventsComponent, canActivate: [AuthenticationGuard]}
 ]
 @NgModule({
   declarations: [
@@ -34,6 +38,8 @@ const routes: Routes = [
     RegisterComponent,
     LoginComponent,
     ProfileComponent,
+    EventsComponent,
+    AdminEventsComponent,
   ],
   imports: [
     BrowserModule,

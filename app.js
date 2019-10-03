@@ -17,6 +17,7 @@ require('dotenv').config();
 
 //  Bring in the routes for the API (delete the default routes)
 var authRoutes = require('./api/routes/authRoutes');
+var eventRoutes = require("./api/routes/eventRoutes");
 //var GuideRoutes = require('./api/routes/GuideRoutes');
 
 
@@ -35,6 +36,7 @@ app.use(passport.initialize());
 
 //  Use the API routes when path starts with /api
 app.use('/api', authRoutes);
+app.use('/api', eventRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

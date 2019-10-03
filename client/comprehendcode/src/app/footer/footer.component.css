@@ -16,3 +16,8 @@
     font-weight: 900;
     color: #39B54A;
 }
+#footer{
+    position: absolute;
+    bottom: 0;
+    margin: 1em;
+}
