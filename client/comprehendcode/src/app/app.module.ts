@@ -8,8 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { HttpClient } from 'selenium-webdriver/http';
-import { NavbarGeneralComponent } from './navbar-general/navbar-general.component';
 import { EventsComponent } from './events/events.component';
+
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
@@ -21,7 +21,6 @@ const routes: Routes = [
     HomeComponent,
     FooterComponent,
     AboutComponent,
-    NavbarGeneralComponent,
     EventsComponent,
   ],
   imports: [
