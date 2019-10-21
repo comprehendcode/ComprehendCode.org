@@ -22,7 +22,7 @@ const routes: Routes = [
     FooterComponent,
     AboutComponent,
     NavbarGeneralComponent,
-    EventsComponent
+    EventsComponent,
   ],
   imports: [
     BrowserModule,

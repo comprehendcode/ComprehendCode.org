@@ -1,38 +1,37 @@
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-    #mission_statement{
-        padding-top: 1.75em;
-        padding-left: 3em;
-        padding-right: 3em;
-        font-size: 3.75em;
-        font-weight: bold;
-        color:black
-    }
+    
     #about{ 
-        background-image: url();
+        background-image: url("../../assets/background.svg");
         width: 100vw;
         height: 100vh;
         background-repeat: no-repeat;
     }
 
-    #our_mission{
-        text-align: center; 
+    #textBox{
+        padding-left: 20em;
     }
 
-    #about_us{
-        padding-top: 2em; 
-        padding-left: 40em;  
-        font-weight: bold; 
-        color: black; 
+    #introHeader{
+        padding-left: 13em;
     }
 
-    #intro{
-        font-size: 32em; 
+    #introTwo{
+        padding-left: 37em;
+    }
+
+    #introThree{
+        padding-left: 19em;
+    }
+
+    #introFour{
+        padding-left: 17.5em;
     }
 
 
-    #container{
-        font-size: 11em;
+    #shiftOne{
+        padding-left: 15em;
     }
 
+   
 }
