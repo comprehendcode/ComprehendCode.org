@@ -1,0 +1,17 @@
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    
+    #about{ 
+        background-image: url("../../assets/background.svg");
+        width: 100vw;
+        height: 100vh;
+        background-repeat: no-repeat;
+    }
+    #text-header {
+        font-weight: bolder;
+    }
+
+   
+}
+
+

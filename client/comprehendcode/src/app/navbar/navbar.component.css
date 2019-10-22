@@ -17,11 +17,21 @@
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     #logo{
+
         height: 5.1em;
         width:7.5em;
     }
     .nav-link{
         font-weight: bolder;
+    }
+
+    .nav-item{
+        padding-left: 3em;
+    }
+
+
+    .panel-transparent .panel-heading{
+        background: rgba(122, 130, 136, 0.2)!important;
     }
 }
 

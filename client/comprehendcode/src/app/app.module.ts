@@ -6,6 +6,14 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
+
+import { AboutComponent } from './about/about.component';
+import { HttpClient } from 'selenium-webdriver/http';
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'about', component: AboutComponent},
+
 import { AdminComponent } from './admin/admin.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AuthenticationGuard } from './authentication.guard';
@@ -25,7 +33,8 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
-  { path: 'admin/events', component: AdminEventsComponent, canActivate: [AuthenticationGuard]}
+
+
 ]
 @NgModule({
   declarations: [
@@ -33,6 +42,7 @@ const routes: Routes = [
     NavbarComponent,
     HomeComponent,
     FooterComponent,
+    AboutComponent,
     AdminComponent,
     AdminNavbarComponent,
     RegisterComponent,
