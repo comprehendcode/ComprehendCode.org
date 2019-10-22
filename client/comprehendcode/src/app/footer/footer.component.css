@@ -1,23 +1,33 @@
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
-
+    #footer {
+      position: relative;
+      bottom: 0;
+      margin: 1em;
+        padding-top: 40%;
+    }
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
-
+    #footer {
+      position: relative;
+      bottom: 0;
+      margin: 1em;
+      padding-top: 40%;
+    }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
+    #footer {
+      position: absolute;
+      bottom: 0;
+      margin: 1em;
+    }
 
 }
 #title{
     font-weight: 900;
     color: #39B54A;
-}
-#footer{
-    position: absolute;
-    bottom: 0;
-    margin: 1em;
 }

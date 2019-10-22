@@ -9,11 +9,6 @@ import { FooterComponent } from './footer/footer.component';
 
 import { AboutComponent } from './about/about.component';
 import { HttpClient } from 'selenium-webdriver/http';
-
-const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'about', component: AboutComponent},
-
 import { AdminComponent } from './admin/admin.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
 import { AuthenticationGuard } from './authentication.guard';
@@ -28,13 +23,12 @@ import { AdminEventsComponent } from './admin-events/admin-events.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'events', component: EventsComponent},
-  { path: 'login', component: LoginComponent },
-  { path: 'register', component: RegisterComponent },
-  { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
-  { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
-
-
+  { path: 'about', component: AboutComponent},
+  //{ path: 'events', component: EventsComponent},
+  //{ path: 'login', component: LoginComponent },
+  //{ path: 'register', component: RegisterComponent },
+  //{ path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
+  //{ path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
 ]
 @NgModule({
   declarations: [
