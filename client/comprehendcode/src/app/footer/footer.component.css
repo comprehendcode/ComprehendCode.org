@@ -3,8 +3,8 @@
     #footer {
       position: relative;
       bottom: 0;
-      margin: 1em;
-        padding-top: 40%;
+      margin: 0em;
+      padding-top: 40%;
     }
 }
 
@@ -13,17 +13,18 @@
     #footer {
       position: relative;
       bottom: 0;
-      margin: 1em;
-      padding-top: 40%;
+      margin: 0em;
+      padding-top: 50%;
     }
 }
 
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     #footer {
-      position: absolute;
+      position: relative;
       bottom: 0;
-      margin: 1em;
+      margin: 0em;
+      padding-top:20%;
     }
 
 }
