@@ -24,7 +24,7 @@ import { AdminEventsComponent } from './admin-events/admin-events.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
-  //{ path: 'events', component: EventsComponent},
+  { path: 'events', component: EventsComponent},
   //{ path: 'login', component: LoginComponent },
   //{ path: 'register', component: RegisterComponent },
   //{ path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },

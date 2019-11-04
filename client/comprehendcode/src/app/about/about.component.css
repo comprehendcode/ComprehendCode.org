@@ -11,6 +11,19 @@
     #text-header {
         font-weight: bolder;
     }
+    .mission{
+        font-size: 3rem;
+    }
+    .leadership{
+        font-size: 2.5rem;
+    }
+    .card{
+        background-color:rgba(250, 244, 244, 0.918);
+    }
+
+    .text{
+        font-size: 1.08rem;
+    }
 
    
 }
