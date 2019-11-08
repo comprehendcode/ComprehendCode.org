@@ -25,4 +25,12 @@
         text-emphasis: bold;
         
     }
+
+    .largeText{
+        font-size: 4em;
+    }
+
+    .smallText{
+        font-size: 3em;
+    }
 }

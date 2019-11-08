@@ -20,11 +20,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { AdminEventsComponent } from './admin-events/admin-events.component';
+import { OurProgressComponent } from './our-progress/our-progress.component';
+
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
   { path: 'events', component: EventsComponent},
+  {path: 'our-progress', component: OurProgressComponent},
   //{ path: 'login', component: LoginComponent },
   //{ path: 'register', component: RegisterComponent },
   //{ path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
@@ -44,6 +47,7 @@ const routes: Routes = [
     ProfileComponent,
     EventsComponent,
     AdminEventsComponent,
+    OurProgressComponent,
   ],
   imports: [
     BrowserModule,
