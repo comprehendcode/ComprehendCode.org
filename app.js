@@ -4,6 +4,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
+var multer  = require('multer')
+var upload = multer({ dest: 'uploads/' })
 
 //  Require Passport
 var passport = require('passport');
@@ -18,6 +20,7 @@ require('dotenv').config();
 //  Bring in the routes for the API (delete the default routes)
 var authRoutes = require('./api/routes/authRoutes');
 var eventRoutes = require("./api/routes/eventRoutes");
+var progressRoutes = require("./api/routes/progressRoute");
 //var GuideRoutes = require('./api/routes/GuideRoutes');
 
 
@@ -37,6 +40,7 @@ app.use(passport.initialize());
 //  Use the API routes when path starts with /api
 app.use('/api', authRoutes);
 app.use('/api', eventRoutes);
+app.use('/api', progressRoutes);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
