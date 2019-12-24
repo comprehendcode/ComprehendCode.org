@@ -47,7 +47,7 @@ module.exports.delete = function (req, res) {
         if(err){
             return res.status(500);
         }else{
-            return res.status(200).json('{"message": "The event has been deleted!"}');
+            return res.status(200).json('{"message": "The post has been deleted!"}');
         }
     })
 }

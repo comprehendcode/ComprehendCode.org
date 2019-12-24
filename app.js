@@ -21,12 +21,12 @@ require('dotenv').config();
 var authRoutes = require('./api/routes/authRoutes');
 var eventRoutes = require("./api/routes/eventRoutes");
 var progressRoutes = require("./api/routes/progressRoute");
-//var GuideRoutes = require('./api/routes/GuideRoutes');
+
 
 
 var app = express();
 
-app.use(helmet());
+//app.use(helmet());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
@@ -93,7 +93,7 @@ app.use(function (err, req, res, next) {
 
 // LOCAL TESTING
 if (process.env.NODE_ENV == "development") {
-    app.listen(process.env.NODE_PORT, () => console.log("Epxress local server running"));
+    app.listen(process.env.NODE_PORT, () => console.log("[√] Epxress local server running!"));
 } else {
     http.createServer(app).listen(80, () => {
         console.log('[√] Http is up')

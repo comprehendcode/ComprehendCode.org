@@ -21,6 +21,8 @@ import { FormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { OurProgressComponent } from './our-progress/our-progress.component';
+import { AdminProgressComponent } from './admin-progress/admin-progress.component';
+import { PostService } from './post.service';
 
 
 const routes: Routes = [
@@ -48,6 +50,7 @@ const routes: Routes = [
     EventsComponent,
     AdminEventsComponent,
     OurProgressComponent,
+    AdminProgressComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,7 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [AuthenticationService, AuthenticationGuard],
+  providers: [AuthenticationService, AuthenticationGuard, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
