@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-admin-progress',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminProgressComponent implements OnInit {
 
-  constructor() { }
+  constructor(private post: PostService) { }
 
   ngOnInit() {
+    this.post
   }
 
+  addPost(){
+    return PostService.addPost(this.post).subscribe();
+  }
 }
