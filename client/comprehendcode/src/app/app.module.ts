@@ -23,6 +23,10 @@ import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { OurProgressComponent } from './our-progress/our-progress.component';
 import { AdminProgressComponent } from './admin-progress/admin-progress.component';
 import { PostService } from './post.service';
+import { FilestackModule } from '@filestack/angular';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 
 
 const routes: Routes = [
@@ -52,12 +56,15 @@ const routes: Routes = [
     AdminEventsComponent,
     OurProgressComponent,
     AdminProgressComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    FilestackModule,
+    NgbModule,
     RouterModule.forRoot(routes),
   ],
   providers: [AuthenticationService, AuthenticationGuard, PostService],

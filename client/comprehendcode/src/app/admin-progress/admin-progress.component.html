@@ -1,4 +1,5 @@
 <app-admin-navbar></app-admin-navbar>
+
 <div class="container">
   <div class="row">
     <div class="col">
@@ -30,13 +31,17 @@
             The post full_text is required
           </small>
           <br>
-          <label for="img_path">Image</label>
-          <div class="form-group input-group">
-            <input type="file" class="form-control" name="img_path" placeholder="Enter post image"
-              formControlName="img_path" required>
-          </div>
+          <ng-picker-overlay
+          [apikey]="apikey"
+          (uploadSuccess)="onUploadSuccess($event)"
+          (uploadError)="onUploadError($event)">
+          <button>Open picker</button>
+        </ng-picker-overlay>
+        <small *ngIf="uploadSucess" class="text-success">
+            Uploaded
+          </small>
           <br>
-        <button type="submit" class="btn btn-primary" [disabled]="!form.valid">Post!</button>
+        <button type="submit" class="btn btn-primary" [disabled]="!form.valid & !uploadSucess">Post!</button>
       </form>
     </div>
   </div>

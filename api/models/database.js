@@ -46,4 +46,3 @@ process.on('SIGINT', function () {
 require('./users');
 require('./event');
 require('./progress');
-require('./image');

@@ -7,7 +7,6 @@ var cors = require('cors');
 var https = require('https')
 var http = require('http')
 var helmet = require('helmet');
-var multer = require('multer');
 var fs = require('fs');
 
 //  Require Passport
@@ -28,7 +27,7 @@ var progressRoutes = require("./api/routes/progressRoute");
 
 var app = express();
 
-app.use(helmet());
+//app.use(helmet());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({

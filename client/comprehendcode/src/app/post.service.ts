@@ -27,17 +27,18 @@ export class PostService {
 
   private httpHeader = {
     headers: {
-      'Access-Control-Allow-Origin': '*'
+      'Access-Control-Allow-Origin': 'http://127.0.0.1:3000'
     }
-  };
+  }
   public getPost(title: any): Observable<any>{
     return this.http.get(this.baseURL + 'progress/' + title,this.httpHeader).pipe();
   }
   public getPosts(): Observable<any>{
-    return this.http.get(this.baseURL + 'progress/', this.httpHeader).pipe();
+    return this.http.get(this.baseURL + 'progress', this.httpHeader).pipe();
   }
   public createPost(post: postDetails): Observable<any> {
     if (this.auth.isLoggedIn){
+      console.log("here Client")
       return this.http.post(this.baseURL+ 'progress/', post, this.httpHeader).pipe();
     }
   }
