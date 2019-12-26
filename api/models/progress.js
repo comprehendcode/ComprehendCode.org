@@ -12,14 +12,8 @@ var progressPost = new mongoose.Schema({
         full_text: {
             type: String
         },
-        img: {
-            // large grid format i think 
-            data:{
-                type: Buffer
-            },
-            contentType: {
-                type: String
-            }
+        img_name: {
+            type: String
         }
     },
     meta: {

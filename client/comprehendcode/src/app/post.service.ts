@@ -10,10 +10,7 @@ export interface postDetails{
   body: {
     desc: String;
     full_text: String;
-    img: { // This is likely wrong and probaly needs to change
-      data: String;
-      contentType: String;
-    }
+    img_name: String;
   };
   meta: {
     date: String;
