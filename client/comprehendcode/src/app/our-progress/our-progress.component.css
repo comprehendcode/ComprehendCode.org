@@ -26,3 +26,52 @@
     }
    
 }
+
+@media only screen and (max-width: 400px) {
+    #card-title{
+        font-weight:400;
+
+    }
+
+    .header{
+        font-size: 2rem;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    .text{
+        font-size: 1.08rem;
+    }
+    .card{
+        width: 20rem;
+        height: 30rem;
+    }
+    #image{
+        height: 10rem;
+        width:20em;
+    }
+}
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    #card-title{
+        font-weight:500;
+
+    }
+    .header{
+        font-size: 2rem;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    .text{
+        font-size: 1.08rem;
+    }
+    .card{
+        width: 20rem;
+        height: 30rem;
+    }
+    #image{
+        height: 10rem;
+        width:20rem;
+    }
+
+}

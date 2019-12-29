@@ -1,13 +1,6 @@
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
     
-    .events{ 
-        background-image: url("../../assets/back.svg");
-        background-size: 100% 100%;
-        width: 100vw;
-        height: 100vh;
-        background-repeat: no-repeat;
-    }
 
 
     #eventsPlanned{
