@@ -31,7 +31,7 @@ module.exports.read = function (req, res) {
 }
 module.exports.readAll = function (req, res) {
     _Post.find((err,post)=>{
-        console.log("here")
+
         if(err){
             return res.status(500); 
         }else{

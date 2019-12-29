@@ -18,6 +18,7 @@ export class OurProgressComponent implements OnInit {
   getPosts(){
     return this.post.getPosts().subscribe((post)=>{
       this.postArray = post;
+      this.postArray.reverse();
       console.log(post)
     }, (err)=>{
       console.log(err);

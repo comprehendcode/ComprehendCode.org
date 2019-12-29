@@ -48,7 +48,7 @@ export class AdminProgressComponent implements OnInit {
     this.postForm.name = this.form.controls.name.value;
     this.postForm.body.desc = this.form.controls.description.value;
     this.postForm.body.full_text = this.form.controls.full_text.value;
-    this.postForm.meta.date = String(this.date.getDate());
+    this.postForm.meta.date = String(this.date.getMonth()+"/"+this.date.getDate()+"/"+this.date.getFullYear());
     this.postForm.meta.author = this.auth.getUserDetails().name; 
     this.addPost();
   }
@@ -56,6 +56,8 @@ export class AdminProgressComponent implements OnInit {
     console.log(this.postForm);
     return this.post.createPost(this.postForm).subscribe(()=>{
       console.log("Post sent!");
+      this.form.reset();
+      
     });
   }
 
