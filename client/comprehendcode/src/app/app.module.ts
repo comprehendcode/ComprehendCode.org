@@ -32,7 +32,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
-  { path: 'events', component: EventsComponent},
+  //{ path: 'events', component: EventsComponent},
   {path: 'our-progress', component: OurProgressComponent},
   { path: 'login', component: LoginComponent },
   //{ path: 'register', component: RegisterComponent },
