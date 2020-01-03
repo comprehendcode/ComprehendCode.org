@@ -23,7 +23,7 @@ export interface EventDetails{
   providedIn: 'root'
 })
 export class EventService {
-  private baseURL =  'http://127.0.0.1/api/';
+  private baseURL =  'https://api.comprehendcode.org/api/';
   constructor(private http: HttpClient, private auth: AuthenticationService) { }
   
   public getEvent(title: any): Observable<any>{
