@@ -1,0 +1,77 @@
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    #card-title{
+        font-weight:500;
+
+    }
+    #title {
+        font-weight: bolder;
+    }
+    .header{
+        font-size: 3rem;
+    }
+    #subtitle{
+        font-size: 1.5rem;
+    }
+    .text{
+        font-size: 1.08rem;
+    }
+    .card{
+        width: 30rem;
+        height: 35rem;
+    }
+    #image{
+        height: 20rem;
+        width:30rem;
+    }
+   
+}
+
+@media only screen and (max-width: 400px) {
+    #card-title{
+        font-weight:400;
+
+    }
+
+    .header{
+        font-size: 2rem;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    .text{
+        font-size: 1.08rem;
+    }
+    .card{
+        width: 20rem;
+        height: 30rem;
+    }
+    #image{
+        height: 10rem;
+        width:20em;
+    }
+}
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    #card-title{
+        font-weight:500;
+
+    }
+    .header{
+        font-size: 2rem;
+    }
+    #subtitle{
+        font-size: 1rem;
+    }
+    .text{
+        font-size: 1.08rem;
+    }
+    .card{
+        width: 20rem;
+        height: 30rem;
+    }
+    #image{
+        height: 10rem;
+        width:20rem;
+    }
+
+}

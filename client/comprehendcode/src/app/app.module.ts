@@ -17,21 +17,28 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EventsComponent } from './events/events.component';
 import { AdminEventsComponent } from './admin-events/admin-events.component';
 import { OurProgressComponent } from './our-progress/our-progress.component';
+import { AdminProgressComponent } from './admin-progress/admin-progress.component';
+import { PostService } from './post.service';
+import { FilestackModule } from '@filestack/angular';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
-  { path: 'events', component: EventsComponent},
+  //{ path: 'events', component: EventsComponent},
   {path: 'our-progress', component: OurProgressComponent},
-  //{ path: 'login', component: LoginComponent },
+  { path: 'login', component: LoginComponent },
   //{ path: 'register', component: RegisterComponent },
-  //{ path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
-  //{ path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
+  {path: 'admin/progress', component: AdminProgressComponent, canActivate: [AuthenticationGuard]},
 ]
 @NgModule({
   declarations: [
@@ -48,14 +55,19 @@ const routes: Routes = [
     EventsComponent,
     AdminEventsComponent,
     OurProgressComponent,
+    AdminProgressComponent,
+
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
+    FilestackModule,
+    NgbModule,
     RouterModule.forRoot(routes),
   ],
-  providers: [AuthenticationService, AuthenticationGuard],
+  providers: [AuthenticationService, AuthenticationGuard, PostService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -26,9 +26,13 @@ export class AuthenticationService {
   private token: string = localStorage.getItem("token")
   private baseUrl: string = "http://127.0.0.1:3000";
   constructor(private http: HttpClient, private router: Router) { }
-
+  private httpHeader = {
+    headers: {
+      'Access-Control-Allow-Origin': 'http://127.0.0.1:3000'
+    }
+  }
   public login(user: TokenPayload): Observable<any> {
-    return this.http.post(this.baseUrl + "/api/login", { email: user.email, password: user.password }).pipe(
+    return this.http.post(this.baseUrl + "/api/login", { email: user.email, password: user.password }, this.httpHeader).pipe(
       map((result: TokenResponse) => {
         if (result.token) {
           this.setToken(result.token);

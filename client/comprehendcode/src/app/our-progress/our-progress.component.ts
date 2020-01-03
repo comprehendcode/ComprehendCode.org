@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PostService } from '../post.service';
 
 @Component({
   selector: 'app-our-progress',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurProgressComponent implements OnInit {
 
-  constructor() { }
-
+  constructor(private post: PostService) { }
+  public postArray;
   ngOnInit() {
+    // Place this into a try case and if it fails display a error message
+    this.getPosts();
   }
 
+  getPosts(){
+    return this.post.getPosts().subscribe((post)=>{
+      this.postArray = post;
+      this.postArray.reverse();
+      console.log(post)
+    }, (err)=>{
+      console.log(err);
+      throw err;
+    })
+  }
 }
