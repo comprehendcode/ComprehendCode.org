@@ -35,7 +35,7 @@ const routes: Routes = [
   //{ path: 'events', component: EventsComponent},
   {path: 'our-progress', component: OurProgressComponent},
   { path: 'login', component: LoginComponent },
-  //{ path: 'register', component: RegisterComponent },
+  { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
   {path: 'admin/progress', component: AdminProgressComponent, canActivate: [AuthenticationGuard]},
