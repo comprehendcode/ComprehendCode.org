@@ -1,0 +1,11 @@
+Comprehend code is an organization based on helping people with learning differences understand and explore the world of computer science. 
+We are made up of two students  who have had the same difficulty exploring computer science due to our dyslexia. 
+Through our experiences, we have created an outlet to help people overcome their learning differences while exploring their journey into the world of code.
+
+
+
+We have been apart of the Woodward Academy community since the 6th grade, as we were both put into the transition program due to our dyslexia. 
+This was also where our love of computer science was first explored as we started to program in the language python. 
+As we started to program, we became aware of the conflict between learning differences and computer science.
+However, through this newly found passion, we overcame this difficulty which lead us to success. 
+

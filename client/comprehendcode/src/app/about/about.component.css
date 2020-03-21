@@ -1,31 +1,100 @@
 /* Desktop Styles */
 @media only screen and (min-width: 961px) {
-    
-    #about{ 
-        background-image: url("../../assets/CC-about.svg");
-        background-size: 100% 100%;
-        width: 100vw;
-        height: 100vh;
-        background-repeat: no-repeat;
+    #title{
+        font-weight: bold;
+        font-size: 21px;
     }
-    #text-header {
-        font-weight: bolder;
+    #who-text{
+        font-size: 18px;
     }
-    .mission{
-        font-size: 3rem;
+    #leadership-title{
+        font-weight: bold;
+        font-size: 21px;
     }
-    .leadership{
-        font-size: 2.5rem;
+    #leadership-text{
+        font-size: 18px;
     }
-    .card{
-        background-color:rgba(250, 244, 244, 0.918);
+    #card-title{
+        text-align: center;
+        font-weight: bold;
+        font-size: 21px;
     }
-
-    .text{
-        font-size: 1.08rem;
+    #card-body{
+        font-size: 18px;
+        text-align: center;
     }
-
-   
+    #leadership_cards {
+        height: 5vh;
+        width: 20vw
+    }
 }
 
+@media only screen and (min-width: 420px) and (max-width: 970px) {
+        #title {
+          font-weight: bold;
+          font-size: 21px;
+        }
+
+        #who-text {
+          font-size: 18px;
+        }
+
+        #leadership-title {
+          font-weight: bold;
+          font-size: 21px;
+        }
+
+        #leadership-text {
+          font-size: 18px;
+        }
+
+        #card-title {
+          text-align: center;
+          font-weight: bold;
+          font-size: 21px;
+        }
+
+        #card-body {
+          font-size: 18px;
+          text-align: center;
+        }
+        #leadership_cards {
+            height: 5vh;
+            width: 20vw;
+        }
+}
+@media only screen and (max-width: 419px) {
+        #title {
+          font-weight: bold;
+          font-size: 21px;
+        }
+
+        #who-text {
+          font-size: 18px;
+        }
+
+        #leadership-title {
+          font-weight: bold;
+          font-size: 21px;
+        }
+
+        #leadership-text {
+          font-size: 18px;
+        }
+
+        #card-title {
+          text-align: center;
+          font-weight: bold;
+          font-size: 21px;
+        }
+
+        #card-body {
+          font-size: 18px;
+          text-align: center;
+        }
+        #leadership_cards{
+            height:5vh;
+            width: 10vw;
+        }
+}
 
