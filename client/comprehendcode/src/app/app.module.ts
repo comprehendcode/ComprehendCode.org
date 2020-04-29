@@ -24,7 +24,8 @@ import { OurProgressComponent } from './our-progress/our-progress.component';
 import { AdminProgressComponent } from './admin-progress/admin-progress.component';
 import { PostService } from './post.service';
 import { FilestackModule } from '@filestack/angular';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BlocklyComponent } from './blockly/blockly.component';
 
 
 
@@ -33,12 +34,13 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
   //{ path: 'events', component: EventsComponent},
-  {path: 'our-progress', component: OurProgressComponent},
-  { path: 'login', component: LoginComponent },
+  { path: 'our-progress', component: OurProgressComponent},
+  { path: 'login', component: LoginComponent},
+  { path: 'intro', component: BlocklyComponent},
   //{ path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
-  {path: 'admin/progress', component: AdminProgressComponent, canActivate: [AuthenticationGuard]},
+  { path: 'admin/progress', component: AdminProgressComponent, canActivate: [AuthenticationGuard]},
 ]
 @NgModule({
   declarations: [
@@ -56,6 +58,7 @@ const routes: Routes = [
     AdminEventsComponent,
     OurProgressComponent,
     AdminProgressComponent,
+    BlocklyComponent,
 
   ],
   imports: [
