@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { NgxBlocklyModule } from 'ngx-blockly';
+
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -41,6 +43,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent, canActivate: [AuthenticationGuard] },
   { path: 'admin', component: AdminComponent, canActivate: [AuthenticationGuard] },
   { path: 'admin/progress', component: AdminProgressComponent, canActivate: [AuthenticationGuard]},
+
 ]
 @NgModule({
   declarations: [
@@ -68,6 +71,7 @@ const routes: Routes = [
     ReactiveFormsModule,
     FilestackModule,
     NgbModule,
+    NgxBlocklyModule,
     RouterModule.forRoot(routes),
   ],
   providers: [AuthenticationService, AuthenticationGuard, PostService],
