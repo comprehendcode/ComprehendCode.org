@@ -26,10 +26,8 @@
             "styles": ["node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.css"
             ],
-            "scripts": ["node_modules/ngx-blockly/scripts/blockly/blockly_compressed.js",
-              "node_modules/ngx-blockly/scripts/blockly/blocks_compressed.js",
-              "node_modules/ngx-blockly/scripts/blockly/python_compressed.js",
-              "node_modules/ngx-blockly/scripts/blockly/msg/js/en.js"]
+            "scripts": ["node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js"]
           },
           "configurations": {
             "production": {

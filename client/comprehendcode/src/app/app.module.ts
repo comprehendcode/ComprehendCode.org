@@ -6,7 +6,6 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { Routes, RouterModule } from '@angular/router';
 import { FooterComponent } from './footer/footer.component';
-import { BlocklyComponent } from './blockly/blockly.component';
 
 import { AboutComponent } from './about/about.component';
 import { HttpClient } from 'selenium-webdriver/http';
@@ -26,8 +25,7 @@ import { AdminProgressComponent } from './admin-progress/admin-progress.componen
 import { PostService } from './post.service';
 import { FilestackModule } from '@filestack/angular';
 import { NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { NgxBlocklyModule } from 'ngx-blockly';
-
+import { BlocklyComponent } from './blockly/blockly.component';
 
 
 
@@ -70,7 +68,6 @@ const routes: Routes = [
     ReactiveFormsModule,
     FilestackModule,
     NgbModule,
-    NgxBlocklyModule,
     RouterModule.forRoot(routes),
   ],
   providers: [AuthenticationService, AuthenticationGuard, PostService],
