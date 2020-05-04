@@ -19,3 +19,8 @@ body {
       background-color: rgb(26, 141, 42);
   
   }
+  ngx-blockly {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
