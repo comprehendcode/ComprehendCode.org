@@ -35,7 +35,7 @@ import { BlocklyComponent } from './blockly/blockly.component';
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'about', component: AboutComponent},
-  //{ path: 'events', component: EventsComponent},
+  { path: 'events', component: EventsComponent},
   { path: 'our-progress', component: OurProgressComponent},
   { path: 'login', component: LoginComponent},
   { path: 'intro', component: BlocklyComponent},
