@@ -24,11 +24,11 @@ export interface TokenPayload {
 @Injectable()
 export class AuthenticationService {
   private token: string = localStorage.getItem("token")
-  private baseUrl: string = "http://127.0.0.1:3000";
+  private baseUrl: string = "https://comprehendcode-backend.herokuapp.com";
   constructor(private http: HttpClient, private router: Router) { }
   private httpHeader = {
     headers: {
-      'Access-Control-Allow-Origin': 'http://127.0.0.1:3000'
+      'Access-Control-Allow-Origin': 'https://comprehendcode-backend.herokuapp.com'
     }
   }
   public login(user: TokenPayload): Observable<any> {
