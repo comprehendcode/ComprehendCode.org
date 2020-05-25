@@ -32,7 +32,7 @@ export class AdminProgressComponent implements OnInit {
   };
   form: FormGroup;
   apikey: string;
-  public uploadSucess = false;
+  public uploadSuccessFlag = false;
   constructor(private post: PostService, private _fb: FormBuilder, private auth: AuthenticationService, private filestackService: FilestackService) { }
   ngOnInit() {
     this.form = this._fb.group({
@@ -48,23 +48,21 @@ export class AdminProgressComponent implements OnInit {
     this.postForm.name = this.form.controls.name.value;
     this.postForm.body.desc = this.form.controls.description.value;
     this.postForm.body.full_text = this.form.controls.full_text.value;
-    this.postForm.meta.date = String(this.date.getMonth()+"/"+this.date.getDate()+"/"+this.date.getFullYear());
-    this.postForm.meta.author = this.auth.getUserDetails().name; 
+    this.postForm.meta.date = String(this.date.getMonth()+'/'+this.date.getDate()+'/'+this.date.getFullYear());
+    this.postForm.meta.author = this.auth.getUserDetails().name;
     this.addPost();
   }
   addPost(){
-    console.log(this.postForm);
     return this.post.createPost(this.postForm).subscribe(()=>{
-      console.log("Post sent!");
+      console.log('Post sent!');
       this.form.reset();
-      
     });
   }
 
 
   onUploadSuccess(res) {
-    this.uploadSucess = true;
-    this.postForm.body.img_name = res.filesUploaded[0].handle; 
+    this.uploadSuccessFlag = true;
+    this.postForm.body.img_name = res.filesUploaded[0].handle;
     console.log('###uploadSuccess', res);
   }
 
