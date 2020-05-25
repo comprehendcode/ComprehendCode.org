@@ -22,12 +22,12 @@ export interface postDetails{
   providedIn: 'root'
 })
 export class PostService {
-  private baseURL =  'https://comprehendcode-backend.herokuapp.com/';
+  private baseURL =  'https://comprehendcode-backend.herokuapp.com/api/';
   constructor(private http: HttpClient, private auth: AuthenticationService) { }
 
   private httpHeader = {
     headers: {
-      'Access-Control-Allow-Origin': 'https://comprehendcode-backend.herokuapp.com/'
+      'Access-Control-Allow-Origin': 'https://comprehendcode-backend.herokuapp.com/api/'
     }
   }
   public getPost(title: any): Observable<any>{
