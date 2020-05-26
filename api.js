@@ -45,7 +45,8 @@ app.use(function (req, res, next) {
 });
 //  Initialise Passport before using the route middleware
 app.use(passport.initialize());
-
+var distDir = __dirname + "/dist/";
+app.use(express.static(distDir));
 
 //  Use the API routes when path starts with /api
 app.use('/api', authRoutes);
