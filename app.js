@@ -45,6 +45,11 @@ app.use(function (req, res, next) {
 });
 //  Initialise Passport before using the route middleware
 app.use(passport.initialize());
+app.use(express.static(__dirname + '/dist/comprehendcode'));
+
+app.get('/*', function(req,res) {  
+    res.sendFile(path.join(__dirname+'/dist/comprehendcode/index.html'));
+});
 
 //  Use the API routes when path starts with /api
 app.use('/api', authRoutes);
@@ -90,11 +95,6 @@ app.use(function (err, req, res, next) {
         message: err.message,
         error: {}
     });
-});
-app.use(express.static(__dirname + '/dist/comprehendcode'));
-
-app.get('/*', function(req,res) {  
-    res.sendFile(path.join(__dirname+'/dist/comprehendcode/index.html'));
 });
 
 
