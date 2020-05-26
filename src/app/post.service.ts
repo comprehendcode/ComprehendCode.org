@@ -22,12 +22,12 @@ export interface postDetails{
   providedIn: 'root'
 })
 export class PostService {
-  private baseURL =  'https://comprehendcode.org/api/';
+  private baseURL =  'https://www.comprehendcode.org/api/';
   constructor(private http: HttpClient, private auth: AuthenticationService) { }
 
   private httpHeader = {
     headers: {
-      'Access-Control-Allow-Origin': 'https://comprehendcode.org/api/'
+      'Access-Control-Allow-Origin': 'https://www.comprehendcode.org/api/'
     }
   }
   public getPost(title: any): Observable<any>{

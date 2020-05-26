@@ -24,11 +24,11 @@ export interface TokenPayload {
 @Injectable()
 export class AuthenticationService {
   private token: string = localStorage.getItem("token")
-  private baseUrl: string = "https://comprehendcode.org";
+  private baseUrl: string = "https://www.comprehendcode.org";
   constructor(private http: HttpClient, private router: Router) { }
   private httpHeader = {
     headers: {
-      'Access-Control-Allow-Origin': 'https://comprehendcode.org'
+      'Access-Control-Allow-Origin': 'https://www.comprehendcode.org'
     }
   }
   public login(user: TokenPayload): Observable<any> {
