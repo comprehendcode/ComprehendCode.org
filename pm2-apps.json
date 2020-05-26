@@ -1,0 +1,15 @@
+{
+    "apps": [
+      {
+        "name": "comprehendcode-frontend",
+        "script": "./server.js",
+        "exec_mode": "cluster",
+        "instances": 2,
+        "node_args": "--max_old_space_size=8192"
+      },
+      {
+        "name": "comprehendcode-api",
+        "script": "./api.js"
+      }
+    ]
+  }
