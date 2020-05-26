@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "pm2 start app.js",
+    "start": "pm2 start app.js -i 0",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
