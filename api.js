@@ -94,9 +94,22 @@ app.use(function (err, req, res, next) {
     });
 });
 
+if(process.env.NODE_ENV == "development"){
+    app.listen(process.env.PORT || 8080, () => console.log("[√] Express server running!"));
+}else{
+    http.createServer(app).listen(80, () => {
+  		console.log('[√] Http is up')
+	})
 
-app.listen(process.env.PORT || 8080, () => console.log("[√] Express server running!"));
-
+	https.createServer({
+ 	    key: fs.readFileSync('/etc/letsencrypt/live/www.comprehendcode.org/privkey.pem'),
+  	    cert: fs.readFileSync('/etc/letsencrypt/live/www.comprehendcode.org/fullchain.pem'),
+  	    ca: fs.readFileSync('/etc/letsencrypt/live/www.comprehendcode.org/fullchain.pem')
+	}, app).listen(443, () => {
+	    console.log('[√] Https is up')
+	})
+	console.log("Express server running for production");
+}
 
 
 module.exports = app;
