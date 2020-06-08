@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "grunt uglify",
     "start": "pm2-runtime start pm2-apps.json",
     "test": "ng test",
     "lint": "ng lint",
