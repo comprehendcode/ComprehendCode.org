@@ -4,19 +4,14 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var cors = require('cors');
-var https = require('https')
-var http = require('http')
 var helmet = require('helmet');
 var fs = require('fs');
-
-//  Require Passport
 var passport = require('passport');
 
 //  Bring in the data model
 require('./api/models/database');
 //  Bring in the Passport config after model is defined
 require('./api/config/passport');
-require('dotenv').config();
 
 //  Bring in the routes for the API (delete the default routes)
 var authRoutes = require('./api/routes/authRoutes');
@@ -27,12 +22,13 @@ var progressRoutes = require("./api/routes/progressRoute");
 
 var app = express();
 
-//app.use(helmet());
+app.use(helmet());
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({
     extended: false
 }));
+// Allowing for Cross Orgin to access the db
 app.use(cookieParser());
 app.use(cors({
 	origin: "*",
@@ -59,9 +55,7 @@ app.use(function (req, res, next) {
     err.status = 404;
     next(err);
 });
-
-// error handlers
-
+  
 //  Catch unauthorised errors
 app.use(function (err, req, res, next) {
     if (err.name === 'UnauthorizedError') {
@@ -74,7 +68,7 @@ app.use(function (err, req, res, next) {
 
 // development error handler
 // will print stacktrace
-if (app.get('env') === 'development') {
+if (process.env.NODE_ENV === 'development') {
     app.use(function (err, req, res, next) {
         res.status(err.status || 500);
         res.render('error', {
@@ -94,22 +88,9 @@ app.use(function (err, req, res, next) {
     });
 });
 
-if(process.env.NODE_ENV == "development"){
-    app.listen(process.env.PORT || 8080, () => console.log("[√] Express server running!"));
-}else{
-    http.createServer(app).listen(80, () => {
-  		console.log('[√] Http is up')
-	})
+// Creates the server
+app.listen(process.env.PORT || 8080, () => console.log("[√] Express server running!"));
 
-	https.createServer({
- 	    key: fs.readFileSync('/etc/letsencrypt/live/www.comprehendcode.org/privkey.pem'),
-  	    cert: fs.readFileSync('/etc/letsencrypt/live/www.comprehendcode.org/fullchain.pem'),
-  	    ca: fs.readFileSync('/etc/letsencrypt/live/www.comprehendcode.org/fullchain.pem')
-	}, app).listen(443, () => {
-	    console.log('[√] Https is up')
-	})
-	console.log("Express server running for production");
-}
 
 
 module.exports = app;
