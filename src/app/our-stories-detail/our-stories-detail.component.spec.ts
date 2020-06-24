@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AdminProgressComponent } from './admin-progress.component';
+import { OurStoriesDetailComponent } from './our-stories-detail.component';
 
-describe('AdminProgressComponent', () => {
-  let component: AdminProgressComponent;
-  let fixture: ComponentFixture<AdminProgressComponent>;
+describe('OurStoriesDetailComponent', () => {
+  let component: OurStoriesDetailComponent;
+  let fixture: ComponentFixture<OurStoriesDetailComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AdminProgressComponent ]
+      declarations: [ OurStoriesDetailComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AdminProgressComponent);
+    fixture = TestBed.createComponent(OurStoriesDetailComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
