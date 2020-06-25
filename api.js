@@ -11,13 +11,8 @@ var app = express();
 
 app.use(helmet());
 app.use(logger('dev'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({
-    extended: false
-}));
 
 //  Initialise Passport before using the route middleware
-app.use(passport.initialize());
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
