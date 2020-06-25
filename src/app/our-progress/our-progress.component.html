@@ -3,28 +3,25 @@
   <div class="row">
     <div class="col">
       <div id="title" class="header"> Our Progress</div>
-      <div id="subtitle">Keep up with what we are doing with an image and a small description. </div>
+      <div id="subtitle"> Keep up with what we are doing with an image and a small description. </div>
       <br>
       <div class="card-deck">
       <div *ngFor="let post of postArray">
         <div class="card">
-          <img src="https://cdn.filestackcontent.com/{{post.body.img_name}}" class="card-img-top" alt="..." id="image">
+          <img src="{{post.picture}}" class="card-img-top" alt="..." id="image">
             <div class="card-body">
-            <h4 class="card-title" id="card-title">{{post.name}}</h4>
-            <p class="card-text">{{post.body.desc}}</p>
+            <h4 class="card-title" id="card-title">{{post.title}}</h4>
+            <p class="card-text">{{post.desc}}</p>
             </div>
             <div class="card-footer">
-              <small class="text-muted">By {{post.meta.author}} </small>
+              <small class="text-muted">By {{post.author}} </small> 
               <br>
-              <small class="text-muted">Date: {{post.meta.date}}</small>
+              <small class="text-muted">Date: {{post.date}}</small>
             </div>
           </div>
           <br>
         </div>
       </div>
-
-    
-    
     </div>
   </div>
 

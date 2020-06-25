@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PostService } from '../post.service';
+import { butterService } from '../services/butterCMS.service';
 
 @Component({
   selector: 'app-our-progress',
@@ -7,22 +7,21 @@ import { PostService } from '../post.service';
   styleUrls: ['./our-progress.component.css']
 })
 export class OurProgressComponent implements OnInit {
+  public postArray = [];
+  constructor() { }
 
-  constructor(private post: PostService) { }
-  public postArray;
   ngOnInit() {
     // Place this into a try case and if it fails display a error message
-    this.getPosts();
+    this.fetchPosts();
   }
 
-  getPosts(){
-    return this.post.getPosts().subscribe((post)=>{
-      this.postArray = post;
-      this.postArray.reverse();
-      console.log(post)
-    }, (err)=>{
-      console.log(err);
-      throw err;
-    })
+  private fetchPosts() {
+    butterService.content.retrieve(['our-progress'])
+      .then((resp)=>{
+        this.postArray = resp.data.data['our-progress'];
+        console.log(resp.data);
+      }).catch((resp) => {
+        console.log(resp);
+      });
   }
 }
