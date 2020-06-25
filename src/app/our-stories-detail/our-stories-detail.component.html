@@ -1,1 +1,12 @@
-<p>our-stories-detail works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <h1>
+        {{story?.data.title}}
+    </h1>
+    <h4>
+    {{story?.data.author.first_name}} {{story?.data.author.last_name}}
+    </h4>
+    <div class="" [innerHTML]="story?.data.body"></div>
+</div>
+
+<app-footer></app-footer>

@@ -4,7 +4,7 @@
         "name": "comprehendcode-node",
         "script": "./api.js",
         "exec_mode": "cluster",
-        "instances": 2,
+        "instances": 4,
         "node_args": "--max_old_space_size=8192"
       }
     ]

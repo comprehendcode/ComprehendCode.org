@@ -7,7 +7,7 @@ import { butterService } from '../services/butterCMS.service';
   styleUrls: ['./our-progress.component.css']
 })
 export class OurProgressComponent implements OnInit {
-  public postArray: any[];
+  public postArray = [];
   constructor() { }
 
   ngOnInit() {
@@ -17,8 +17,9 @@ export class OurProgressComponent implements OnInit {
 
   private fetchPosts() {
     butterService.content.retrieve(['our-progress'])
-      .then(function(resp){
-        this.postArray = resp.data;
+      .then((resp)=>{
+        this.postArray = resp.data.data['our-progress'];
+        console.log(resp.data);
       }).catch((resp) => {
         console.log(resp);
       });

@@ -16,6 +16,7 @@ import { FilestackModule } from '@filestack/angular';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { OurStoriesComponent } from './our-stories/our-stories.component';
 import { OurStoriesDetailComponent } from './our-stories-detail/our-stories-detail.component';
+import { FeedComponent } from './feed/feed.component';
 
 
 
@@ -24,7 +25,10 @@ const routes: Routes = [
   {path: '', component: HomeComponent },
   {path: 'about', component: AboutComponent},
   {path: 'our-progress', component: OurProgressComponent},
-  {path: 'our-stories', component: OurStoriesComponent}
+  {path: 'our-stories', component: OurStoriesComponent},
+  {path: 'our-stories/:slug', component: OurStoriesDetailComponent},
+  {path: '**', redirectTo: ''},
+  {path: 'rss', component: FeedComponent}
 
 ]
 @NgModule({
@@ -37,6 +41,7 @@ const routes: Routes = [
     OurProgressComponent,
     OurStoriesComponent,
     OurStoriesDetailComponent,
+    FeedComponent,
 
   ],
   imports: [

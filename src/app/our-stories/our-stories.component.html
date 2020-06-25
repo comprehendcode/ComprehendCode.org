@@ -1,1 +1,29 @@
+<app-navbar></app-navbar>
+<div class="container"> 
+  <div class="row">
+    <div class="col">
+      <div id="title" class="header"> Our Stories</div>
+      <div id="subtitle">We share with you stories of people with learning difference.</div>
+      <br>
+      <div class="card-deck">
+      <div *ngFor="let post of storyArray">
+        <div class="card" routerLink="{{post.slug}}">
+          <img src="{{post.featured_image}}" class="card-img-top" alt="..." id="image">
+            <div class="card-body">
+            <h4 class="card-title" id="card-title">{{post.title}}</h4>
+            <p class="card-text">{{post.summary}}</p>
+            </div>
+            <div class="card-footer">
+              <small class="text-muted">By {{post.author.first_name}} {{post.author.last_name}}</small> 
+              <br>
+              <small class="text-muted">Date: {{post.published}}</small>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
 
+</div>
+<app-footer></app-footer>
