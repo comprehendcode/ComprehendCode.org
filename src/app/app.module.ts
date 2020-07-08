@@ -17,6 +17,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { OurStoriesComponent } from './our-stories/our-stories.component';
 import { OurStoriesDetailComponent } from './our-stories-detail/our-stories-detail.component';
 import { FeedComponent } from './feed/feed.component';
+import { DifferencesComponent } from './differences/differences.component';
+
 
 
 
@@ -27,6 +29,7 @@ const routes: Routes = [
   {path: 'our-progress', component: OurProgressComponent},
   {path: 'our-stories', component: OurStoriesComponent},
   {path: 'our-stories/:slug', component: OurStoriesDetailComponent},
+  {path: 'learning-diff', component: DifferencesComponent},
   {path: '**', redirectTo: ''},
   {path: 'rss', component: FeedComponent}
 
@@ -42,6 +45,7 @@ const routes: Routes = [
     OurStoriesComponent,
     OurStoriesDetailComponent,
     FeedComponent,
+    DifferencesComponent,
 
   ],
   imports: [
